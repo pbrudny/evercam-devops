@@ -86,6 +86,10 @@ group :development do
   gem 'guard-rspec', '~> 4.5.2'
 end
 
+group :developmnet, :test do
+  gem 'spinach-rails'
+end
+
 group :test do
   gem 'database_cleaner'
   gem 'factory_girl'
