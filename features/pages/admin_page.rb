@@ -1,12 +1,12 @@
 module Pages
-  class CameraPage < Base
+  class AdminPage < Base
 
     def visit
-      page.visit '/admin/cameras'
+      page.visit '/admin'
     end
 
     def sample_content
-      'Owner'
+      'Total cameras'
     end
   end
 end

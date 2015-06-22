@@ -3,7 +3,8 @@ Feature: Index cameras
   As an admin
   I want to be able to access admin section and index cameras
 
-  Scenario: Index camers
+  Scenario: Index cameras
     Given I am logged in as admin
-    When I am on cameras section
+    And I am on admin panel
+    When I visit camera section
     Then I should see all cameras

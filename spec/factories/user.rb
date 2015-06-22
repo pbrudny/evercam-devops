@@ -23,5 +23,9 @@ FactoryGirl.define do
       factory :active_user do
          confirmed_at Time.now - 86400
       end
+
+     factory :admin do
+       is_admin true
+     end
    end
 end

@@ -4,10 +4,15 @@ require './config/environment'
 require 'rspec'
 require 'rspec-rails'
 require 'factory_girl'
+require 'pry'
+require 'database_cleaner'
+
+require 'webmock'
+include WebMock::API
 
 FactoryGirl.find_definitions
+# WebMock.disable_net_connect!(:allow_localhost => true)
 
-require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
 
 Spinach.hooks.before_scenario do

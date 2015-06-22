@@ -30,7 +30,7 @@
     </td>
     <% 11.downto(0) do |i| %>
       <td>
-        <%= DashCamera.where(created_at: DashCamera.select(:created_at).order(:created_at).first.created_at..i.months.ago.end_of_month).count %>
+        <%= DashCamera.where(created_at: DashCamera.select(:created_at).order(:created_at).first.created_at..i.months.ago.end_of_month).count if DashCamera.count > 0 %>
       </td>
     <% end %>
   </tr>
@@ -72,7 +72,7 @@
     </td>
     <% 11.downto(0) do |i| %>
       <td>
-        <%= DashUser.where(created_at: DashCamera.select(:created_at).order(:created_at).first.created_at..i.months.ago.end_of_month).count %>
+        <%= DashUser.where(created_at: DashCamera.select(:created_at).order(:created_at).first.created_at..i.months.ago.end_of_month).count if DashCamera.count > 0 %>
       </td>
     <% end %>
   </tr>

@@ -88,10 +88,10 @@ end
 
 group :developmnet, :test do
   gem 'spinach-rails'
+  gem 'database_cleaner'
 end
 
 group :test do
-  gem 'database_cleaner'
   gem 'factory_girl'
   gem 'vcr'
   gem 'rspec-rails', '~> 3.3.2'
@@ -101,4 +101,5 @@ group :test do
   gem 'rack_session_access'
   gem 'selenium-webdriver'
   gem 'launchy'
+  gem 'capybara'
 end
